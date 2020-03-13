@@ -33,7 +33,7 @@ async function getData(){
     return obj
 }
 
-async function main(){
+async function funny(){
     let data = await getData()||{};
     console.log(data);
     try {
@@ -57,7 +57,9 @@ async function main(){
     // }
 }
 
-main().catch((error) => {
+funny().catch((error) => {
     console.log(error);
     process.exit();
 });
+
+module.exports = funny

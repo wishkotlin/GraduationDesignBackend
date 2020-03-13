@@ -25,7 +25,7 @@ async function getData(){
     return obj
 }
 
-async function main(){
+async function hot(){
     let data = await getData()||{};
     console.log(data);
     try {
@@ -49,7 +49,9 @@ async function main(){
     // }
 }
 
-main().catch((error) => {
+hot().catch((error) => {
     console.log(error);
     process.exit();
 });
+
+module.exports = hot
