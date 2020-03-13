@@ -17,5 +17,13 @@ module.exports = appInfo => {
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
   };
 
+  config.cluster = {
+    listen: {
+      path: '',
+      port: 8080,
+      hostname: '0.0.0.0',
+    }
+  };
+
   return config;
 };
