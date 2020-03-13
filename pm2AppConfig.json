@@ -1,0 +1,17 @@
+{
+  "apps": [
+      {
+          "name": "my-app",
+          "script": "npm",
+          "args" : "start",
+          "exec_mode": "cluster",
+          "min_uptime": "120s",
+          "max_restarts": 8,
+          "max_memory_restart": "100M",
+          "log_date_format": "YYYY-MM-DD HH:mm Z",
+          "error_file": "./log/my-appError.log",
+          "out_file": "./log/my-app.log",
+          "pid_file": "./pid/my-app.pid"
+      }
+  ]
+}
