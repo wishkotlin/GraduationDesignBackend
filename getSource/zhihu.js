@@ -15,7 +15,7 @@ async function getData(){
     let html = await response.data;
     let $ = Cheerio.load(html);
     let obj = []
-    $('#node-6 .nano-content a').each((i,item) => {
+    $('#node-19 .nano-content a').each((i,item) => {
         let temp = Cheerio.load(item)
         const index = temp('.cc-cd-cb-ll .s').text()
         const title = temp('.cc-cd-cb-ll .t').text()
