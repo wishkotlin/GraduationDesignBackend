@@ -22,4 +22,5 @@ module.exports = app => {
   router.post('/v1/activation', controller.one.activation);
   router.get('/v1/funny', controller.getSource.funny);
   router.get('/v1/hot', controller.getSource.hot);
+  router.get('/v1/zhihu', controller.getSource.zhihu);
 };

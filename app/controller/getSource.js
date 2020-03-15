@@ -23,6 +23,16 @@ class GetSource extends AbstractController {
       return this.serverError(error);
     }
   }
+  async zhihu() {
+    try {
+      const r = await fs.readJSON('data/zhihu.json');
+      const { origin } = this.ctx.request.header
+      this.ctx.response.set('Access-Control-Allow-Origin', origin);
+      this.ctx.body = r;
+    } catch (error) {
+      return this.serverError(error);
+    }
+  }
 }
 
 module.exports = GetSource;
